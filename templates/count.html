@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Count</title>
+</head>
+<body>
+    <h1>COUNT PAGE</h1>
+    <p>This is the count page.</p>
+
+    <h2>There are {{ count }} works in your text.</h2>
+    
+    <a href="{% url 'home' %}">Start Again</a>
+
+    <h2>Your Text: </h2>
+    {{ fulltext }}
+
+    <h1>Word Count:</h1>
+    {% for word, counttotal in sortOutput %}
+    
+    {{ word }} - {{ counttotal }}
+    <br />
+
+    {% endfor %}
+
+
+</body>
+</html>
